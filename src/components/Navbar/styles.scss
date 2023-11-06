@@ -1,0 +1,157 @@
+@import "../../global.scss";
+.navbar-container {
+  &.dark{
+    header {
+      background: #191c1fd9;
+    }
+  }
+  &.light{
+    header {
+      background: #fff;
+      border-bottom: 1px solid #E2E2E2
+    }
+    button{
+      background: #e2e2e2;
+      color: #000;
+      *{
+        color: #000;
+        font-weight: 600;
+        border-color: #aaa;
+      }
+    }
+  }
+  
+  header {
+    padding: 13px 0px;
+    box-shadow: none;
+
+    @media (min-width: 600px) {
+      padding: 13px 55px;
+    }
+    .MuiToolbar-root{
+      @include mobile_potrait{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    }
+  }
+  .my_theme_slelct{
+  }
+  
+
+  .left-menu {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    .menu_list{
+      @include mobile_potrait{
+        display: none;
+      }
+    }
+    
+
+    img {
+      width: 56px;
+      height: 56px;
+      @include mobile_potrait{
+        width: 46px;
+        height: 46px;
+      }
+    }
+
+    a {
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 22px;
+      margin-right: 24px;
+
+      &.active {
+        background: linear-gradient(to right, #FF00FF, #FE511B);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+  .time_div{
+    display: flex;
+    align-items: center;
+    grid-area: auto;
+    gap : 16px;
+    @include mobile_potrait{
+      right: 46px;
+      top : 12px;
+      position: absolute;
+
+    }
+  }
+  .btn_div{
+    @include mobile_potrait{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+  .showMenuBtn{
+    display: none;
+    @include mobile_potrait{
+      display: flex;
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      background-color: #ffffff00;
+      border: none;
+      font-size: 24px;
+    }
+  }
+
+  .day-info {
+    text-align: center;
+    margin-right: 10px;
+   
+
+    label {
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+
+  .network-select {
+    &:before {
+      display: none;
+    }
+
+    div {
+      color: white;
+      font-size: 12px;
+    }
+
+    svg {
+      color: white;
+    }
+  }
+
+  button[data-testid="rk-connect-button"] {
+    border-radius: 144px !important;
+    background: linear-gradient(126deg, #F0F 0%, #FE511B 100%) !important;
+    display: inline-flex;
+    padding: 18px 24px !important;
+    align-items: flex-start;
+    height: 46px !important;
+    color: #FFF;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 10px !important;
+    letter-spacing: 0.49px;
+  }
+}
